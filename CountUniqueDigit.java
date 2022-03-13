@@ -1,9 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-public class CountUniqueDigit 
+public class CountUniqueDigit
 {
-public static void main(String[] args) 
+public static void main(String[] args)
 {
 Scanner sc = new Scanner(System.in);
 int lb=sc.nextInt();
@@ -19,20 +19,20 @@ for(int i=lb; i<=ub; i++)
 	{
 		arr[k]=0;
 	}
-   
+
    int num=i;
-	while(true)
+	while(num>0)
 	{
 
-		if(arr[num%10]==1 || num==0)
+		if(arr[num%10]==1)
 		{
 			break;
 		}
 
 		arr[num%10]=1;
 		num = num/10;
-		
-		
+
+
 	}
 	if(num==0)
 		c=c+1;
